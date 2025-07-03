@@ -7,3 +7,13 @@ This project builds a full MLOps CI/CD pipeline that trains, validates, and depl
 - Kubernetes (EKS, GKE, AKS)
 - MLflow
 - Prometheus + Grafana
+
+## Running locally with Docker
+```bash
+docker build -t ml-train-pipeline .
+docker run --rm ml-train-pipeline
+```
+Or use the convenience script:
+```bash
+./scripts/build-and-run.sh
+```
