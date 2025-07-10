@@ -8,6 +8,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
+
 def main():
     iris = load_iris()
     X = iris.data
@@ -37,6 +38,7 @@ def main():
         mlflow.sklearn.log_model(clf, "model")
 
         print(f"Model accuracy: {accuracy}")
+
 
 if __name__ == "__main__":
     main()
