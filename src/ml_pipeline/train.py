@@ -19,7 +19,7 @@ def main():
         X, y, test_size=0.3, random_state=42
     )
 
-    mlflow.set_tracking_uri("http://localhost:5000")
+    mlflow.set_tracking_uri(os.environ["MLFLOW_TRACKING_URI"])
     mlflow.set_experiment("iris-classifier")
 
     with mlflow.start_run():
